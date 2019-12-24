@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Ametist;
+  font-style: normal;
+  src: url("../fonts/tough_sans.otf");
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  src: url("../fonts/Montserrat/Montserrat-Black.ttf");
+}
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+@import "../css/bootstrap.min.css";
+.slider-item {
+  background-color: #ccc;
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+  margin: 0 20px;
+}
+h3 {
+  font-family: Montserrat;
+}
+h1 {
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+.red {
+  background-color: #f00;
+}
+.green {
+  background-color: #008000;
+}
+#submit {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border-radius-color: #008000;
+  border: 1px solid #008000;
+}
+#submit:hover {
+  background-color: #008000;
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../../js/script.js"></script>
+</head>
+<body>
+
+<form action="" method="post" id="my_form" enctype="multipart/form-data">
+    <label for="fio">Ф.И.О:</label>
+    <input type="text" name="fio" id="fio"><br>
+    <label for="avatar">Аватар:</label>
+    <input type="file" name="filename" id="avatar"><br>
+    <input type="submit" id="submit" value="Отправить">
+</form>
+    <div id="dom"></div>
+<script>
+    $(function(){
+        $('#my_form').on('submit', function(e){
+            e.preventDefault();
+            var $that = $(this),
+                formData = new FormData($that.get(0)); // создаем новый экземпляр объекта и передаем ему нашу форму (*)
+            $.ajax({
+                url: 'handler.php',
+                type: $that.attr('method'),
+                contentType: false, // важно - убираем форматирование данных по умолчанию
+                processData: false, // важно - убираем преобразование строк по умолчанию
+                data: formData,
+                dataType: 'json',
+                success: function(json){
+                    if(json){
+                        $("#dom").after(json);
+                        //$that.replaceWith(json);
+                        console.log(json[1]['sum']);
+                        outpt(json);
+                    }
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+</html>
