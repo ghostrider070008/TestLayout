@@ -36,3 +36,17 @@ $('.submit.button').click(function( event ){
 const date = new Date();  
 const month = date.toLocaleString('ru-RU', { month: 'long' });//month
 console.log(month); 
+let d = new Date();
+let year = d.getFullYear();
+let month1 = d.getUTCMonth();
+let first_day = new Date();
+    d.setDate(d.getDate() + 8 ); 
+console.log(d.getDate());
+
+
+var app = new Vue({
+    el: '#app-month',
+    data: {
+      message: month
+    }
+  })

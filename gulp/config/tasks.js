@@ -9,4 +9,5 @@ module.exports = [
     './gulp/tasks/clean',
     './gulp/tasks/font',
     './gulp/tasks/php',
+    './gulp/tasks/html',
 ];
