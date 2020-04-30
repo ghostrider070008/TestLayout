@@ -39,7 +39,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-svgmin": "^2.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "slick-carousel": "^1.8.1",
     "svgmin": "^0.1.0"
   }
